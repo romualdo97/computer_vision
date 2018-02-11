@@ -9,7 +9,7 @@ Created on Thu Jan 25 07:05:44 2018
 # Here you can select one of the four proposed exercises for revision,
 # change the EXERCISE_NUMBER for select an exersice.
 
-EXERCISE_NUMBER = 3
+EXERCISE_NUMBER = 0
 
 # when EXERCISE_NUMBER == 0
 #   conclusion: don't transform the original image.
@@ -26,6 +26,11 @@ EXERCISE_NUMBER = 3
 #   conclusion: control brightness and contrast for each channel
 #               separately
 
+# when EXERCISE_NUMBER == 4
+#   conclusion: define a color range threshoold and apply additional
+#               brightness and contrast correction to each channel
+
+
 
 
 # =====================================================================
@@ -38,7 +43,7 @@ import numpy as np
 import cv2
 
 # input vars
-if EXERCISE_NUMBER == 0 or EXERCISE_NUMBER == 1 or EXERCISE_NUMBER == 3:
+if EXERCISE_NUMBER == 0 or EXERCISE_NUMBER == 1 or EXERCISE_NUMBER == 3 or EXERCISE_NUMBER == 4:
     img_original = cv2.imread("1_cho_in_color.jpg")
     height, width, chanels = img_original.shape
 elif EXERCISE_NUMBER == 2:
@@ -47,7 +52,7 @@ elif EXERCISE_NUMBER == 2:
 
 
 # output vars
-if EXERCISE_NUMBER == 0 or EXERCISE_NUMBER == 3:
+if EXERCISE_NUMBER == 0 or EXERCISE_NUMBER == 3 or EXERCISE_NUMBER == 4:
     img_out = np.zeros((height, width, 3), np.uint8)
 elif EXERCISE_NUMBER == 1 or EXERCISE_NUMBER == 2:
     img_out_mono = np.zeros((height, width), np.uint8)
@@ -81,17 +86,37 @@ def high_contrast_kernel(in_color):
 
 # 3) conslusion: control brightness and contrast for each channel
 def high_contrast_color_kernel(in_color):
+    # corrections for red
     ra = 1.12
     rb = -10
-    
+    # corrections for green   
     ga = 1.09
     gb = -15
-    
+    # corrections for blue
     ba = 1.06
     bb = -20
-    
+    # applu corrections
     A = in_color;
     out_color = [(A[0] + rb) * ra, (A[1] + gb) * ga, (A[2] + bb) * ba]
+    return out_color
+
+def threshoold_kernel(in_color):
+    A = in_color#high_contrast_color_kernel(in_color);
+    # threshoold for red
+    rmax = 250
+    rmin = 0
+    # threshoold for green
+    gmax = 250
+    gmin = 0
+    # threshoold for blue
+    bmax = 240
+    bmin = 110
+    # applu corrections
+    # using python ternary operator (a if condition else b)
+    A[0] = rmax if A[0] > rmax else rmin if A[0] < rmin else A[0]
+    A[1] = gmax if A[1] > gmax else gmin if A[1] < gmin else A[1]
+    A[2] = bmax if A[2] > bmax else bmin if A[2] < bmin else A[2]
+    out_color = high_contrast_color_kernel(A)
     return out_color
 
 # =====================================================================
@@ -124,12 +149,20 @@ def high_contrast_program():
     # SAVE IMAGE TRANSFORMATIONS
     texImage2D(img_out_mono, color, True)
     
-# 2) control brightness and contrast
+# 2) control brightness and contrast for each channel separately
 def high_contrast_color_program():
     # READ IMAGE DATA
     texel = texture(img_original, False)            
     # EXECUTE A COMPUTE KERNEL   
     color = high_contrast_color_kernel(texel);            
+    # SAVE IMAGE TRANSFORMATIONS
+    texImage2D(img_out, color, False)
+    
+def threshoold_program():
+    # READ IMAGE DATA
+    texel = texture(img_original, False)            
+    # EXECUTE A COMPUTE KERNEL   
+    color = threshoold_kernel(texel);            
     # SAVE IMAGE TRANSFORMATIONS
     texImage2D(img_out, color, False)
     
@@ -139,10 +172,12 @@ def high_contrast_color_program():
 # read texture texels similar to glsl
 def texture(texture2D, is_mono):
     if is_mono:
-        b0 = texture2D.item(i, j)
-        g0 = b0
-        r0 = b0
-        texel = [r0, g0, b0]
+        #minor bug fix
+        if EXERCISE_NUMBER == 1:
+            b0 = texture2D.item(i, j, 0)
+        elif EXERCISE_NUMBER == 2:
+            b0 = texture2D.item(i, j)
+        texel = [b0, b0, b0]
     else:
         b0 = texture2D.item(i, j, 0)
         g0 = texture2D.item(i, j, 1)
@@ -182,9 +217,11 @@ while (True):
                 high_contrast_program();
             elif EXERCISE_NUMBER == 3:
                 high_contrast_color_program();
+            elif EXERCISE_NUMBER == 4:
+                threshoold_program();
     
     cv2.imshow("Original", img_original)
-    if EXERCISE_NUMBER == 0 or EXERCISE_NUMBER == 3:
+    if EXERCISE_NUMBER == 0 or EXERCISE_NUMBER == 3 or EXERCISE_NUMBER == 4:
         cv2.imshow("Resultado", img_out)
     elif EXERCISE_NUMBER == 1 or EXERCISE_NUMBER == 2:
         cv2.imshow("Resultado", img_out_mono)
@@ -193,10 +230,16 @@ while (True):
     ch = 0xFF & cv2.waitKey()
     if (ch == ord('q')):
         #cv2.imwrite("out.jpg", img_out_mono)
-        if EXERCISE_NUMBER == 0 or EXERCISE_NUMBER == 3:
-            writeTex2D("out.jpg", img_out, False);
-        elif EXERCISE_NUMBER == 1 or EXERCISE_NUMBER == 2:
-            writeTex2D("out.jpg", img_out_mono, True);
+        if EXERCISE_NUMBER == 0:
+            writeTex2D("out_exercise_0.jpg", img_out, False);
+        elif EXERCISE_NUMBER == 3:
+            writeTex2D("out_exercise_3.jpg", img_out, False);
+        elif EXERCISE_NUMBER == 4:
+            writeTex2D("out_exercise_4.jpg", img_out, False);
+        elif EXERCISE_NUMBER == 1:
+            writeTex2D("out_exercise_1.jpg", img_out_mono, True);
+        elif EXERCISE_NUMBER == 2:
+            writeTex2D("out_exercise_2.jpg", img_out_mono, True);
         break
     
 cv2.destroyAllWindows();
