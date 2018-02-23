@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Modules\GLmodule\GLmodule.cpp">
+      <Filter>Modules\GLmodule\source</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\GLmodule\glad.c">
+      <Filter>Modules\GLmodule\source</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\GLmodule\Quad.cpp">
+      <Filter>Modules\GLmodule\source</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\GLmodule\Shader.cpp">
+      <Filter>Modules\GLmodule\source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Modules">
+      <UniqueIdentifier>{4074350e-a965-4a72-876f-9dd7c56aedb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\GLmodule">
+      <UniqueIdentifier>{f73365b8-62c0-47f8-9fef-b7f9e3e67ac2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\GLmodule\source">
+      <UniqueIdentifier>{4ec3fa0b-49a3-4d73-bf9d-5e1979619f96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\GLmodule\include">
+      <UniqueIdentifier>{aa45a079-787d-4057-8cdd-8e9e1e2efc6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\GLmodule\Shaders">
+      <UniqueIdentifier>{dcd5884b-62f1-4b11-94ea-8cc5062f1cc5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Modules\GLmodule\GLmodule.h">
+      <Filter>Modules\GLmodule\include</Filter>
+    </ClInclude>
+    <ClInclude Include="configs.h" />
+    <ClInclude Include="Modules\GLmodule\Quad.h">
+      <Filter>Modules\GLmodule\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\GLmodule\Shader.h">
+      <Filter>Modules\GLmodule\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Modules\GLmodule\Shaders\basic.frag">
+      <Filter>Modules\GLmodule\Shaders</Filter>
+    </None>
+    <None Include="Modules\GLmodule\Shaders\basic.vert">
+      <Filter>Modules\GLmodule\Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
