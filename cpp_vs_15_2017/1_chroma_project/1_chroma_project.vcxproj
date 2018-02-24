@@ -113,13 +113,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Modules\GLmodule\Context.cpp" />
     <ClCompile Include="Modules\GLmodule\glad.c" />
     <ClCompile Include="Modules\GLmodule\GLmodule.cpp" />
     <ClCompile Include="Modules\GLmodule\Quad.cpp" />
     <ClCompile Include="Modules\GLmodule\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="configs.h" />
+    <ClInclude Include="Modules\GLmodule\Context.h" />
     <ClInclude Include="Modules\GLmodule\GLmodule.h" />
     <ClInclude Include="Modules\GLmodule\Quad.h" />
     <ClInclude Include="Modules\GLmodule\Shader.h" />

@@ -15,10 +15,11 @@ in vec3 vPos;
 uniform float iTime;
 uniform vec2 iResolution;
 uniform vec2 iMouse;
+uniform float iDayHour;
+uniform float iDir;
 
 // output
 out vec4 fragColor;
-
 
 // definitions
 const int NUM_STEPS = 8;
@@ -75,10 +76,10 @@ float specular(vec3 n,vec3 l,vec3 e,float s) {
 // sky
 vec3 getSkyColor(vec3 e) {
     float a = 1.0;//1.0
-    //float b = 0.0;//0.4
-    float b = iMouse.x / iResolution.x;
+    //float b = iMouse.x / iResolution.x;
+    float b = iDayHour;
     e.y = max(e.y,0.0);
-    return vec3(pow(a-e.y,2.0), a-e.y, 0.6+(a-e.y)*b);
+    return vec3(pow(a-e.y,b), a-e.y, 0.6+(a-e.y)*b);
 }
 
 // sea
@@ -179,7 +180,9 @@ void main()
 	vec2 uv = vUv;
     uv = uv * 2.0 - 1.0;
     uv.x *= iResolution.x / iResolution.y;    
-    float time = iTime * 0.3 + iMouse.x*0.01;
+    //float time = iTime * 0.3 + iMouse.x*0.01;
+    float time = iTime * 0.3;
+    time *= iDir;
         
     // ray
     vec3 ang = vec3(sin(time*3.0)*0.1,sin(time)*0.2+0.3,time);    

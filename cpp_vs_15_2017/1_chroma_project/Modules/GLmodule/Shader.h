@@ -9,6 +9,7 @@
 class Shader
 {
 public:
+	Shader();
 	// Constructor: Specify vertex and fragment shader path
 	// Shader("MyFrag.frag", "myVert.vert");
 	Shader(GLchar const *vertexPath, GLchar const *fragmentPath);
@@ -23,6 +24,7 @@ public:
 	void setBool(std::string const &name, bool value);
 	void setInt(std::string const &name, int value);
 	void setFloat(std::string const &name, float value);
+	void setVec2(std::string const &name, float v0, float v1);
 	~Shader();
 	unsigned int ID;
 private:

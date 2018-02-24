@@ -2,6 +2,11 @@
 
 
 
+Shader::Shader()
+{
+	// do anything...
+}
+
 Shader::Shader(GLchar const *vertexPath, GLchar const *fragmentPath)
 {
 	std::string vertexCode;
@@ -176,7 +181,13 @@ void Shader::setInt(std::string const &name, int value)
 void Shader::setFloat(std::string const &name, float value)
 {
 	unsigned int uniformLoc = glGetUniformLocation(ID, name.c_str());
-	glUniform1i(uniformLoc, value);
+	glUniform1f(uniformLoc, value);
+}
+
+void Shader::setVec2(std::string const &name, float v0, float v1)
+{
+	unsigned int uniformLoc = glGetUniformLocation(ID, name.c_str());
+	glUniform2f(uniformLoc, v0, v1);
 }
 
 Shader::~Shader()

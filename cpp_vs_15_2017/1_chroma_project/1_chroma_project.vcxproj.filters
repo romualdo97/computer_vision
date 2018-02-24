@@ -14,6 +14,9 @@
     <ClCompile Include="Modules\GLmodule\Shader.cpp">
       <Filter>Modules\GLmodule\source</Filter>
     </ClCompile>
+    <ClCompile Include="Modules\GLmodule\Context.cpp">
+      <Filter>Modules\GLmodule\source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Modules">
@@ -36,11 +39,13 @@
     <ClInclude Include="Modules\GLmodule\GLmodule.h">
       <Filter>Modules\GLmodule\include</Filter>
     </ClInclude>
-    <ClInclude Include="configs.h" />
     <ClInclude Include="Modules\GLmodule\Quad.h">
       <Filter>Modules\GLmodule\include</Filter>
     </ClInclude>
     <ClInclude Include="Modules\GLmodule\Shader.h">
+      <Filter>Modules\GLmodule\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\GLmodule\Context.h">
       <Filter>Modules\GLmodule\include</Filter>
     </ClInclude>
   </ItemGroup>

@@ -4,61 +4,43 @@
 
 GLmodule::GLmodule()
 {
-	std::cout << "Initializing GL module" << std::endl;
-	// ==========================================================================================================
-	// INIT GLFW AND PREPARE WINDOW AND CONTEXT CREATION
-	glfwInit(); // init glfw
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3); // request to create context for opengl 3.x
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3); // request to create context for opengl x.3
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // request to create core profile context
-	// ==========================================================================================================
+	myShader = Shader("Modules/GLmodule/Shaders/seascape");
+	mouse = (double*)malloc(2 * sizeof(double));
 }
 
-int GLmodule::windowShouldClose()
+void GLmodule::update(float dayHour)
 {
-	return glfwWindowShouldClose(window);
+	// clear color buffer - rgb(104, 109, 224)
+	glClearColor(104.0f / 255.0f, 109.0f / 255.0f, 224.0f / 255.0f, 1.0f);
+	glClear(GL_COLOR_BUFFER_BIT);
+
+	// use shader
+	myShader.use();
+
+	// pass uniforms
+	myShader.setFloat("iTime", (float) glfwGetTime()); // pass time to shader
+	myShader.setVec2("iResolution", W, H); // pass resolution to shader
+	glfwGetCursorPos(windowContext.window, mouse, mouse + 1); // get mouse position
+	myShader.setVec2("iMouse", (float)*mouse, (float)*(mouse + 1)); // pass mouse position
+	myShader.setFloat("iDayHour", dayHour);
+	myShader.setFloat("iDir", 0.0);
+
+	// draw quad
+	myQuad.use();
+
+	// update the window context
+	windowContext.update();
 }
 
-bool GLmodule::initContext()
-{	
-	// ==========================================================================================================
-	// CREATE WINDOW AND MAKE ITS CONTEXT THE CURRENT
-	window = glfwCreateWindow(W, H, TITLE, NULL, NULL);
-	if (window == NULL)
-	{
-		std::cout << "Window creation failed\n" << std::endl;
-		glfwTerminate();
-		return false;
-	}
-	glfwMakeContextCurrent(window);
-	// ==========================================================================================================
-
-	// ==========================================================================================================
-	// 3. MANAGES OPENGL FUNCTIONS POINTERS
-	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-	{
-		std::cout << "Failed to initialize GLAD\n" << std::endl;
-		return false;
-	}
-	return true;
-	// ==========================================================================================================
-
-	glViewport(0, 0, W, H);
-}
-
-void GLmodule::update()
+int GLmodule::shouldClose()
 {
-	if (glfwGetKey(window, GLFW_KEY_ESCAPE) || glfwGetKey(window, GLFW_KEY_Q))
-	{
-		glfwSetWindowShouldClose(window, true);
-	}
-	glfwSwapBuffers(window); // swap opengl back and front buffers
-	glfwPollEvents(); // listen for events
+	return windowContext.windowShouldClose();
 }
 
 void GLmodule::terminate()
 {
 	glfwTerminate();
+	free(mouse);
 }
 
 GLmodule::~GLmodule()
