@@ -11,6 +11,11 @@
 in vec2 vUv;
 in vec3 vPos;
 
+// input as uniforms
+uniform float iTime;
+uniform vec2 iResolution;
+uniform vec2 iMouse;
+
 // output
 out vec4 fragColor;
 
@@ -69,8 +74,11 @@ float specular(vec3 n,vec3 l,vec3 e,float s) {
 
 // sky
 vec3 getSkyColor(vec3 e) {
+    float a = 1.0;//1.0
+    //float b = 0.0;//0.4
+    float b = iMouse.x / iResolution.x;
     e.y = max(e.y,0.0);
-    return vec3(pow(1.0-e.y,2.0), 1.0-e.y, 0.6+(1.0-e.y)*0.4);
+    return vec3(pow(a-e.y,2.0), a-e.y, 0.6+(a-e.y)*b);
 }
 
 // sea
@@ -193,6 +201,11 @@ void main()
     	pow(smoothstep(0.0,-0.05,dir.y),0.3));
         
     // post
-	//fragColor = vec4(pow(color,vec3(0.75)), 1.0);
-    fragColor = vec4(1.0);
+	fragColor = vec4(pow(color,vec3(0.75)), 1.0);
+    
 }
+
+/*void main()
+{
+    fragColor = vec4(iMouse.x/iResolution.x);
+}*/
