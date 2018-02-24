@@ -5,6 +5,8 @@ and interactive 3D app
 
 #pragma once
 
+// read about framebuffer target here: https://gamedevelopment.tutsplus.com/tutorials/how-to-write-a-smoke-shader--cms-25587
+
 #include <glad\glad.h>
 #include <GLFW\glfw3.h>
 #include <iostream>

@@ -106,9 +106,12 @@ void Shader::compileShader(char const *vertex_src, char const *fragment_src)
 	glLinkProgram(ID);
 	checkCompileError(ID, NULL, GL_LINK_STATUS);
 
+	/*std::cout << "\n================================================================\n";
+	std::cout << "// VERTEX SHADER\n";
 	std::cout << "\n" << vertex_src << std::endl;
-
-	std::cout << "\n" << fragment_src << std::endl;
+	std::cout << "\n================================================================\n";
+	std::cout << "// FRAGMENT SHADER\n";
+	std::cout << "\n" << fragment_src << std::endl;*/
 
 	glDeleteShader(vertexShader);
 	glDeleteShader(fragmentShader);

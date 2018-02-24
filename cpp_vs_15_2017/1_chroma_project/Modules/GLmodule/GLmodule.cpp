@@ -48,7 +48,7 @@ bool GLmodule::initContext()
 
 void GLmodule::update()
 {
-	if (glfwGetKey(window, GLFW_KEY_ESCAPE))
+	if (glfwGetKey(window, GLFW_KEY_ESCAPE) || glfwGetKey(window, GLFW_KEY_Q))
 	{
 		glfwSetWindowShouldClose(window, true);
 	}
