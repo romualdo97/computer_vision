@@ -1,7 +1,8 @@
 #pragma once
 // read docs at: https://docs.opencv.org/2.4/doc/tutorials/imgproc/erosion_dilatation/erosion_dilatation.html
 // how use morph functions?: https://stackoverflow.com/questions/17329932/how-to-use-erode-and-dilate-function-in-opencv
-#include <opencv2\opencv.hpp>
+//#include <opencv2\opencv.hpp>
+#include <opencv2\imgproc.hpp>
 
 class NoiseReduction
 {
