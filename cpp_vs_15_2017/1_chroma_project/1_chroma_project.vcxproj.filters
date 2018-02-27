@@ -17,6 +17,21 @@
     <ClCompile Include="Modules\GLmodule\Context.cpp">
       <Filter>Modules\GLmodule\source</Filter>
     </ClCompile>
+    <ClCompile Include="Modules\CVmodule\CVmodule.cpp">
+      <Filter>Modules\CVmodule\source</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\CVmodule\Input.cpp">
+      <Filter>Modules\CVmodule\source</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\CVmodule\Segmentation.cpp">
+      <Filter>Modules\CVmodule\source</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\CVmodule\NoiseReduction.cpp">
+      <Filter>Modules\CVmodule\source</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\CVmodule\Features.cpp">
+      <Filter>Modules\CVmodule\source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Modules">
@@ -34,6 +49,15 @@
     <Filter Include="Modules\GLmodule\Shaders">
       <UniqueIdentifier>{dcd5884b-62f1-4b11-94ea-8cc5062f1cc5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Modules\CVmodule">
+      <UniqueIdentifier>{92ef9b2d-0b7f-4d2a-99ce-f34193e0e7e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\CVmodule\include">
+      <UniqueIdentifier>{95e457a8-2a16-4b34-bf5b-51add04e7d49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules\CVmodule\source">
+      <UniqueIdentifier>{f7f828de-72b6-470d-bc62-e2fd869107e5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Modules\GLmodule\GLmodule.h">
@@ -47,6 +71,22 @@
     </ClInclude>
     <ClInclude Include="Modules\GLmodule\Context.h">
       <Filter>Modules\GLmodule\include</Filter>
+    </ClInclude>
+    <ClInclude Include="configs.h" />
+    <ClInclude Include="Modules\CVmodule\CVmodule.h">
+      <Filter>Modules\CVmodule\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\CVmodule\Input.h">
+      <Filter>Modules\CVmodule\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\CVmodule\Segmentation.h">
+      <Filter>Modules\CVmodule\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\CVmodule\NoiseReduction.h">
+      <Filter>Modules\CVmodule\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\CVmodule\Features.h">
+      <Filter>Modules\CVmodule\include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

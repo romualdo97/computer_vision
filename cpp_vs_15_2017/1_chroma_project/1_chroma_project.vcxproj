@@ -58,7 +58,7 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="opengl_dep_debug.props" />
+    <Import Project="cv_gl_dep_debug.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -113,6 +113,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Modules\CVmodule\CVmodule.cpp" />
+    <ClCompile Include="Modules\CVmodule\Features.cpp" />
+    <ClCompile Include="Modules\CVmodule\Input.cpp" />
+    <ClCompile Include="Modules\CVmodule\NoiseReduction.cpp" />
+    <ClCompile Include="Modules\CVmodule\Segmentation.cpp" />
     <ClCompile Include="Modules\GLmodule\Context.cpp" />
     <ClCompile Include="Modules\GLmodule\glad.c" />
     <ClCompile Include="Modules\GLmodule\GLmodule.cpp" />
@@ -120,6 +125,12 @@
     <ClCompile Include="Modules\GLmodule\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="configs.h" />
+    <ClInclude Include="Modules\CVmodule\CVmodule.h" />
+    <ClInclude Include="Modules\CVmodule\Features.h" />
+    <ClInclude Include="Modules\CVmodule\Input.h" />
+    <ClInclude Include="Modules\CVmodule\NoiseReduction.h" />
+    <ClInclude Include="Modules\CVmodule\Segmentation.h" />
     <ClInclude Include="Modules\GLmodule\Context.h" />
     <ClInclude Include="Modules\GLmodule\GLmodule.h" />
     <ClInclude Include="Modules\GLmodule\Quad.h" />

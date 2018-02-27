@@ -40,7 +40,8 @@ const vec3 SEA_WATER_COLOR = vec3(0.8,0.9,0.6);
 const mat2 octave_m = mat2(1.6,1.2,-1.2,1.6);
 
 // math
-mat3 fromEuler(vec3 ang) {
+mat3 fromEuler(vec3 ang) 
+{
 	vec2 a1 = vec2(sin(ang.x),cos(ang.x));
     vec2 a2 = vec2(sin(ang.y),cos(ang.y));
     vec2 a3 = vec2(sin(ang.z),cos(ang.z));

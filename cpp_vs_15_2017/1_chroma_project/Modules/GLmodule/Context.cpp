@@ -20,7 +20,7 @@ bool Context::createWindow()
 {
 	// ==========================================================================================================
 	// CREATE WINDOW AND MAKE ITS CONTEXT THE CURRENT
-	window = glfwCreateWindow(W, H, TITLE, NULL, NULL);
+	window = glfwCreateWindow(rjlvmj_W, rjlvmj_H, rjlvmj_TITLE, NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Window creation failed\n" << std::endl;
@@ -40,7 +40,7 @@ bool Context::createWindow()
 	return true;
 	// ==========================================================================================================
 
-	glViewport(0, 0, W, H);
+	glViewport(0, 0, rjlvmj_W, rjlvmj_H);
 }
 
 int Context::windowShouldClose()

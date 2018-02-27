@@ -3,8 +3,8 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <IncludePath>$(OPENGL_DIR)\glfw3\include;$(OPENGL_DIR)\glad\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(OPENGL_DIR)\glfw3\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(OPENGL_DIR)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OPENGL_DIR)lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <Link>
