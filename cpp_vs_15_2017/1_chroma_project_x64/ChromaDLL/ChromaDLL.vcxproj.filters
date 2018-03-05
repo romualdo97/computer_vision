@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ChromaDLL.cpp" />
+    <ClCompile Include="input.cpp">
+      <Filter>input_module</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation.cpp">
+      <Filter>segmentation_module</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ChromaDLL.h" />
+    <ClInclude Include="configs.h" />
+    <ClInclude Include="input.h">
+      <Filter>input_module</Filter>
+    </ClInclude>
+    <ClInclude Include="segmentation.h">
+      <Filter>segmentation_module</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="input_module">
+      <UniqueIdentifier>{afdbd1fd-ed5e-46c6-9f71-ebebbb5555e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="segmentation_module">
+      <UniqueIdentifier>{816bd1fa-2c0a-41d2-a653-59cdc5458cf6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
