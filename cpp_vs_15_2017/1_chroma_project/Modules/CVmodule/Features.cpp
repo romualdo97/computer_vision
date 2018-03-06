@@ -13,7 +13,7 @@ double *Features::calculateCentroid(cv::Mat inFrame)
 {
 	moments = cv::moments(inFrame);
 
-	// centroid will bee 0,0 when area is qeual or less than 1
+	// centroid will bee 0,0 when area is equal or less than 1
 	if (moments.m00 <= 1)
 	{
 		*centroid = 0;	*(centroid + 1) = 0;

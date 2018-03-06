@@ -8,6 +8,12 @@
     <ClCompile Include="segmentation.cpp">
       <Filter>segmentation_module</Filter>
     </ClCompile>
+    <ClCompile Include="noisereduction.cpp">
+      <Filter>noise_module</Filter>
+    </ClCompile>
+    <ClCompile Include="features.cpp">
+      <Filter>features_module</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChromaDLL.h" />
@@ -18,6 +24,12 @@
     <ClInclude Include="segmentation.h">
       <Filter>segmentation_module</Filter>
     </ClInclude>
+    <ClInclude Include="noisereduction.h">
+      <Filter>noise_module</Filter>
+    </ClInclude>
+    <ClInclude Include="features.h">
+      <Filter>features_module</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="input_module">
@@ -25,6 +37,12 @@
     </Filter>
     <Filter Include="segmentation_module">
       <UniqueIdentifier>{816bd1fa-2c0a-41d2-a653-59cdc5458cf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="noise_module">
+      <UniqueIdentifier>{f61a9fee-a373-4502-895e-913e0e6758d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="features_module">
+      <UniqueIdentifier>{68c8e418-1591-413c-b306-ed117b9009a1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

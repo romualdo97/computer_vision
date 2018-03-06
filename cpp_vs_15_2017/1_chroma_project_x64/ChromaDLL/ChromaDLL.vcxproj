@@ -149,13 +149,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ChromaDLL.cpp" />
+    <ClCompile Include="features.cpp" />
     <ClCompile Include="input.cpp" />
+    <ClCompile Include="noisereduction.cpp" />
     <ClCompile Include="segmentation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChromaDLL.h" />
     <ClInclude Include="configs.h" />
+    <ClInclude Include="features.h" />
     <ClInclude Include="input.h" />
+    <ClInclude Include="noisereduction.h" />
     <ClInclude Include="segmentation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

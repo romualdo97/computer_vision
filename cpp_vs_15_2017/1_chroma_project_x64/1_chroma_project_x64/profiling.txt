@@ -1,0 +1,17 @@
+when rjlvmj_DEBUG_MODE precompilation symbol is defined:
+	time in ms spent calling main::update() 35 times;
+
+151+157+84+76+112+77+77+73+140+116+75+71+78+75+74+174+94+78+109+73+71+75+72+74+72+74+80+73+146+71+73+80+107+74+74 = 3180ms
+
+	avg = 3180ms/35
+	avg = 90.85ms
+
+========================================================================
+
+when rjlvmj_DEBUG_MODE precompilation symbol is not defined:
+	time in ms spent calling main::update() 35 times;
+
+9+8+7+4+4+4+4+4+4+3+4+4+3+4+4+4+4+5+4+4+4+4+4+4+4+4+4+4+4+5+4+4+4+4+4 = 152ms
+	
+	avg = 152ms/35
+	avg = 4.34ms

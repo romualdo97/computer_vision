@@ -1,15 +1,23 @@
 #include <ChromaDLL.h>
 
+void update()
+{
+	takePhoto();
+	calibrate();
+	calculateMask();
+	reduceNoise();
+	calculateCentroid();
+	std::cout << "x: " << getNormCentroid_x() << std::endl;
+	updateCount();
+}
+
 int main(void)
 {
 	initCamera();
 	int i = 0;
-	while (i < 5)
+	while (i < 35)
 	{
-		takePhoto();
-		calibrate();
-		calculateMask();
-		updateCount();
+		update();
 		i++;
 	}
 	terminatePlugin();

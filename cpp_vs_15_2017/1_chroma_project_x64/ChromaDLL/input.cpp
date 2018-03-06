@@ -18,12 +18,16 @@ void input::initCamera()
 
 void input::takePhoto()
 {
-	std::stringstream imgname;
-	imgname << "img/capture" << i << ".jpg";
 	capture >> inputFrame;
 	cv::flip(inputFrame, inputFrame, 1); // flip capture frame
+	
+#ifdef rjlvmj_DEBUG_MODE
+	// save image
+	std::stringstream imgname;
+	imgname << "img/capture" << i << ".jpg";
 	cv::imwrite(imgname.str(), inputFrame);
 	i++;
+#endif // rjlvmj_DEBUG_MODE									 
 }
 
 cv::Mat input::getPhoto()

@@ -6,7 +6,7 @@ namespace segmentation
 	cv::Mat frame;
 	cv::Mat calibratedFrame;
 	bool isCalibrating = true;
-	int n = 3;
+	int n = FRAMES_FOR_CALIBRATION;
 	float _a = 1.0f / (float)n;
 	int index = 0;
 }
