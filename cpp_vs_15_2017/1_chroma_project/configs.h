@@ -4,7 +4,7 @@
 // TODO: Include only the needed opencv dependencies
 
 #define rjlvmj_DEBUG_MODE
-//#define rjlvmj_SHOW_OPENGL_APP
+#define rjlvmj_SHOW_OPENGL_APP
 
 #define rjlvmj_TITLE "Operation Rosales" // window title
 #define rjlvmj_W 960 // window width

@@ -21,6 +21,7 @@ public class SpherePosition : MonoBehaviour
         float x = (float)ChromaPlugin.GetNormCentroid_x() - 0.5f;
         Vector3 nPos = new Vector3(x * -10.0f, 0, 0);
         transform.position = nPos;
+        //Debug.Log(x);
     }
 
     private void OnApplicationQuit()
