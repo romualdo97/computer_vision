@@ -15,7 +15,7 @@ int main(void)
 {
 	initCamera();
 	int i = 0;
-	while (i < 35)
+	while (i < 65)
 	{
 		update();
 		i++;

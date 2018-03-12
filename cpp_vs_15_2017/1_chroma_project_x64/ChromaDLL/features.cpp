@@ -17,7 +17,7 @@ double features::getCentroid_x()
 	{
 		return 0.0;
 	}
-	return moments.m10 / moments.m00;;
+	return moments.m10 / moments.m00;
 }
 
 double features::getCentroid_y()

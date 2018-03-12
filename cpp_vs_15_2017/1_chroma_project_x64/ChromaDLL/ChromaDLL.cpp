@@ -5,6 +5,8 @@ cv::Mat maskFrame;
 cv::Mat noiselessFrame;
 
 #ifdef rjlvmj_DEBUG_MODE
+#include <fstream>
+std::ofstream logFile("img/000aaalogfile.txt");
 int count; // frame count
 #endif // rjlvmj_DEBUG_MODE
 
@@ -23,6 +25,13 @@ extern "C"
 	void updateCount()
 	{
 #ifdef rjlvmj_DEBUG_MODE
+		logFile << "FRAME" << count << ":\n";
+		logFile << "\tframe.cols: " << frame.cols;
+		logFile << "\tframe.rows: " << frame.rows << std::endl;
+		logFile << "\tx: " << getCentroid_x();
+		logFile << "\ty: " << getCentroid_y() << std::endl;
+		logFile << "\txn: " << getNormCentroid_x();
+		logFile << "\tyn: " << getNormCentroid_y() << std::endl;
 		count++;
 #endif // rjlvmj_DEBUG_MODE
 	}
@@ -126,10 +135,11 @@ extern "C"
 	}
 	double getNormCentroid_x()
 	{
-		return features::getCentroid_x()/(double)frame.cols;
+		double w = frame.cols;
+		return getCentroid_x() / w;
 	}
 	double getNormCentroid_y()
 	{
-		return features::getCentroid_x() / (double)frame.rows;
+		return getCentroid_y() / (double)frame.rows;
 	}
 }

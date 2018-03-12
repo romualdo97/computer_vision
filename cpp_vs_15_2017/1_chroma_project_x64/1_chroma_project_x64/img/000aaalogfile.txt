@@ -1,0 +1,260 @@
+FRAME0:
+	frame.cols: 640	frame.rows: 480
+	x: 389.39	y: 239.124
+	xn: 0.608422	yn: 0.498175
+FRAME1:
+	frame.cols: 640	frame.rows: 480
+	x: 410.69	y: 237.059
+	xn: 0.641704	yn: 0.493873
+FRAME2:
+	frame.cols: 640	frame.rows: 480
+	x: 451.253	y: 200.847
+	xn: 0.705083	yn: 0.418431
+FRAME3:
+	frame.cols: 640	frame.rows: 480
+	x: 509.447	y: 86.238
+	xn: 0.796011	yn: 0.179662
+FRAME4:
+	frame.cols: 640	frame.rows: 480
+	x: 0	y: 0
+	xn: 0	yn: 0
+FRAME5:
+	frame.cols: 640	frame.rows: 480
+	x: 0	y: 0
+	xn: 0	yn: 0
+FRAME6:
+	frame.cols: 640	frame.rows: 480
+	x: 0	y: 0
+	xn: 0	yn: 0
+FRAME7:
+	frame.cols: 640	frame.rows: 480
+	x: 0	y: 0
+	xn: 0	yn: 0
+FRAME8:
+	frame.cols: 640	frame.rows: 480
+	x: 0	y: 0
+	xn: 0	yn: 0
+FRAME9:
+	frame.cols: 640	frame.rows: 480
+	x: 0	y: 0
+	xn: 0	yn: 0
+FRAME10:
+	frame.cols: 640	frame.rows: 480
+	x: 0	y: 0
+	xn: 0	yn: 0
+FRAME11:
+	frame.cols: 640	frame.rows: 480
+	x: 638.231	y: 50.6154
+	xn: 0.997236	yn: 0.105449
+FRAME12:
+	frame.cols: 640	frame.rows: 480
+	x: 619.082	y: 80.4967
+	xn: 0.967315	yn: 0.167701
+FRAME13:
+	frame.cols: 640	frame.rows: 480
+	x: 604.655	y: 89.8608
+	xn: 0.944774	yn: 0.18721
+FRAME14:
+	frame.cols: 640	frame.rows: 480
+	x: 580.76	y: 104.211
+	xn: 0.907438	yn: 0.217106
+FRAME15:
+	frame.cols: 640	frame.rows: 480
+	x: 557.847	y: 165.859
+	xn: 0.871637	yn: 0.34554
+FRAME16:
+	frame.cols: 640	frame.rows: 480
+	x: 561.673	y: 400.654
+	xn: 0.877614	yn: 0.834696
+FRAME17:
+	frame.cols: 640	frame.rows: 480
+	x: 534.66	y: 403.406
+	xn: 0.835406	yn: 0.840429
+FRAME18:
+	frame.cols: 640	frame.rows: 480
+	x: 501.453	y: 384.753
+	xn: 0.78352	yn: 0.801568
+FRAME19:
+	frame.cols: 640	frame.rows: 480
+	x: 470.224	y: 361.388
+	xn: 0.734725	yn: 0.752891
+FRAME20:
+	frame.cols: 640	frame.rows: 480
+	x: 446.127	y: 351.434
+	xn: 0.697074	yn: 0.732154
+FRAME21:
+	frame.cols: 640	frame.rows: 480
+	x: 423.969	y: 346.313
+	xn: 0.662451	yn: 0.721486
+FRAME22:
+	frame.cols: 640	frame.rows: 480
+	x: 404.372	y: 348.529
+	xn: 0.631831	yn: 0.726103
+FRAME23:
+	frame.cols: 640	frame.rows: 480
+	x: 367.544	y: 354.185
+	xn: 0.574288	yn: 0.737886
+FRAME24:
+	frame.cols: 640	frame.rows: 480
+	x: 346.862	y: 359.158
+	xn: 0.541971	yn: 0.748246
+FRAME25:
+	frame.cols: 640	frame.rows: 480
+	x: 326.323	y: 366.536
+	xn: 0.50988	yn: 0.763618
+FRAME26:
+	frame.cols: 640	frame.rows: 480
+	x: 306.718	y: 374.48
+	xn: 0.479246	yn: 0.780166
+FRAME27:
+	frame.cols: 640	frame.rows: 480
+	x: 290.846	y: 382.301
+	xn: 0.454447	yn: 0.79646
+FRAME28:
+	frame.cols: 640	frame.rows: 480
+	x: 282.015	y: 385.953
+	xn: 0.440648	yn: 0.804069
+FRAME29:
+	frame.cols: 640	frame.rows: 480
+	x: 274.602	y: 387.104
+	xn: 0.429065	yn: 0.806466
+FRAME30:
+	frame.cols: 640	frame.rows: 480
+	x: 267.989	y: 387.158
+	xn: 0.418733	yn: 0.80658
+FRAME31:
+	frame.cols: 640	frame.rows: 480
+	x: 263.929	y: 389.267
+	xn: 0.41239	yn: 0.810973
+FRAME32:
+	frame.cols: 640	frame.rows: 480
+	x: 260.422	y: 390.548
+	xn: 0.406909	yn: 0.813641
+FRAME33:
+	frame.cols: 640	frame.rows: 480
+	x: 258.378	y: 389.833
+	xn: 0.403715	yn: 0.812153
+FRAME34:
+	frame.cols: 640	frame.rows: 480
+	x: 257.798	y: 390.663
+	xn: 0.402809	yn: 0.813881
+FRAME35:
+	frame.cols: 640	frame.rows: 480
+	x: 257.962	y: 391.205
+	xn: 0.403066	yn: 0.815011
+FRAME36:
+	frame.cols: 640	frame.rows: 480
+	x: 259.442	y: 391.649
+	xn: 0.405378	yn: 0.815936
+FRAME37:
+	frame.cols: 640	frame.rows: 480
+	x: 264.904	y: 394.016
+	xn: 0.413912	yn: 0.820866
+FRAME38:
+	frame.cols: 640	frame.rows: 480
+	x: 265.745	y: 396.141
+	xn: 0.415226	yn: 0.825293
+FRAME39:
+	frame.cols: 640	frame.rows: 480
+	x: 263.121	y: 402.211
+	xn: 0.411127	yn: 0.837939
+FRAME40:
+	frame.cols: 640	frame.rows: 480
+	x: 257.617	y: 392.338
+	xn: 0.402526	yn: 0.81737
+FRAME41:
+	frame.cols: 640	frame.rows: 480
+	x: 257.48	y: 371.136
+	xn: 0.402313	yn: 0.773199
+FRAME42:
+	frame.cols: 640	frame.rows: 480
+	x: 260.61	y: 359.837
+	xn: 0.407204	yn: 0.74966
+FRAME43:
+	frame.cols: 640	frame.rows: 480
+	x: 259.12	y: 358.081
+	xn: 0.404875	yn: 0.746003
+FRAME44:
+	frame.cols: 640	frame.rows: 480
+	x: 256.847	y: 358.875
+	xn: 0.401324	yn: 0.747657
+FRAME45:
+	frame.cols: 640	frame.rows: 480
+	x: 254.68	y: 360.018
+	xn: 0.397937	yn: 0.750038
+FRAME46:
+	frame.cols: 640	frame.rows: 480
+	x: 252.682	y: 361.438
+	xn: 0.394816	yn: 0.752995
+FRAME47:
+	frame.cols: 640	frame.rows: 480
+	x: 244.063	y: 361.995
+	xn: 0.381348	yn: 0.754156
+FRAME48:
+	frame.cols: 640	frame.rows: 480
+	x: 239.259	y: 377.555
+	xn: 0.373843	yn: 0.786573
+FRAME49:
+	frame.cols: 640	frame.rows: 480
+	x: 243.274	y: 388.513
+	xn: 0.380116	yn: 0.809403
+FRAME50:
+	frame.cols: 640	frame.rows: 480
+	x: 243.541	y: 387.974
+	xn: 0.380533	yn: 0.80828
+FRAME51:
+	frame.cols: 640	frame.rows: 480
+	x: 245.869	y: 386.595
+	xn: 0.384171	yn: 0.805407
+FRAME52:
+	frame.cols: 640	frame.rows: 480
+	x: 250.42	y: 385.949
+	xn: 0.391281	yn: 0.804061
+FRAME53:
+	frame.cols: 640	frame.rows: 480
+	x: 253.777	y: 386.949
+	xn: 0.396527	yn: 0.806143
+FRAME54:
+	frame.cols: 640	frame.rows: 480
+	x: 255.079	y: 389.657
+	xn: 0.398562	yn: 0.811785
+FRAME55:
+	frame.cols: 640	frame.rows: 480
+	x: 256.841	y: 392.412
+	xn: 0.401313	yn: 0.817525
+FRAME56:
+	frame.cols: 640	frame.rows: 480
+	x: 258.667	y: 395.935
+	xn: 0.404166	yn: 0.824864
+FRAME57:
+	frame.cols: 640	frame.rows: 480
+	x: 260.648	y: 401.911
+	xn: 0.407262	yn: 0.837315
+FRAME58:
+	frame.cols: 640	frame.rows: 480
+	x: 261.196	y: 408.155
+	xn: 0.408119	yn: 0.850322
+FRAME59:
+	frame.cols: 640	frame.rows: 480
+	x: 264.765	y: 397.397
+	xn: 0.413695	yn: 0.827911
+FRAME60:
+	frame.cols: 640	frame.rows: 480
+	x: 260.123	y: 344.195
+	xn: 0.406442	yn: 0.717073
+FRAME61:
+	frame.cols: 640	frame.rows: 480
+	x: 261.968	y: 335.061
+	xn: 0.409325	yn: 0.698045
+FRAME62:
+	frame.cols: 640	frame.rows: 480
+	x: 265.276	y: 337.263
+	xn: 0.414494	yn: 0.702631
+FRAME63:
+	frame.cols: 640	frame.rows: 480
+	x: 263.064	y: 338.731
+	xn: 0.411038	yn: 0.705689
+FRAME64:
+	frame.cols: 640	frame.rows: 480
+	x: 262.883	y: 342.085
+	xn: 0.410754	yn: 0.712677

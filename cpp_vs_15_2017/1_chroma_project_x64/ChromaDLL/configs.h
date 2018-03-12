@@ -1,7 +1,7 @@
 #pragma once
 
 // write images in disk?
-#define rjlvmj_DEBUG_MODE
+//#define rjlvmj_DEBUG_MODE
 
 // how many frames for calibration?
 #define FRAMES_FOR_CALIBRATION 5 
