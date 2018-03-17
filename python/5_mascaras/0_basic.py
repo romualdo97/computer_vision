@@ -31,7 +31,8 @@ while(True):
         
     else:
         print('Camera not available')
-    
+        
+
     # Waits for 25ms
     wait = 0xFF & cv2.waitKey(10)
     if (wait == ord('q') or wait == ord('Q')):
