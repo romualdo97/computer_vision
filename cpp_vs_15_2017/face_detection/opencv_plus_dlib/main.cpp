@@ -8,7 +8,9 @@
 
 #define DOWNSAMPLE_RATIO 2 // how much downscale original cam image for speed-up face detector?
 #define SKIP_N_FRAMES 1 // how many webcam frames skip from face detector?
-#define SMILE_CASCADE_FILEPATH "haarcascade_smile.xml"
+#define SMILE_CASCADE_FILEPATH "haarcascade_smile.xml" // trained haar descriptor for smile recognition
+#define BORDER_SIZE 5 // the border size for calculate roi in videofram
+
 // convert dlib rectangle to an opencv one
 cv::Rect dlibRect2cvRect(dlib::rectangle, unsigned int, unsigned int);
 
@@ -66,7 +68,8 @@ int main(void)
 
 			// detect smile
 			smileCascade.detectMultiScale(faceROI, smilesRect, 1.7, 22, 0 | CV_HAAR_SCALE_IMAGE, cv::Size(25, 25));
-			std::cout << "Number of smiles detected: " << smilesRect.size() << std::endl;
+			std::cout << "<" << faceRect.x << ", " << faceRect.y << ">\n";
+			//std::cout << "Number of smiles detected: " << smilesRect.size() << std::endl;
 
 			// show smile bounding box
 			if (smilesRect.size() > 0)
@@ -91,15 +94,19 @@ int main(void)
 cv::Rect dlibRect2cvRect(dlib::rectangle dlib_rect, unsigned int w, unsigned int h)
 {
 	static cv::Rect rect;
+
+	// extract dlib rectangle data
 	long left = dlib_rect.left();
 	long width = dlib_rect.width();
 	long top = dlib_rect.top();
 	long height = dlib_rect.height();
+
 	// rect.x > 0 && rect.x + width < w
-	rect.x =  left <= 0 ? 0 : left + width >= w ? (w - left) * DOWNSAMPLE_RATIO : left * DOWNSAMPLE_RATIO;
-	rect.y = top <= 0 ? 0 : top + height >= h ? (h - top) * DOWNSAMPLE_RATIO : top * DOWNSAMPLE_RATIO;
-	rect.width = (unsigned int)  width * DOWNSAMPLE_RATIO;
+	rect.x =  left <= BORDER_SIZE ? 0 : left + width >= w - BORDER_SIZE ? (w - width) * DOWNSAMPLE_RATIO : left * DOWNSAMPLE_RATIO;
+	rect.y = top <= BORDER_SIZE ? 0 : top + height >= h - BORDER_SIZE ? (h - height) * DOWNSAMPLE_RATIO : top * DOWNSAMPLE_RATIO;
+	rect.width = (unsigned int) width * DOWNSAMPLE_RATIO;
 	rect.height = (unsigned int) height * DOWNSAMPLE_RATIO;
+
 	return rect;
 }
 
