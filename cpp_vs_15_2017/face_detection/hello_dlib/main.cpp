@@ -7,7 +7,7 @@
 #define USE_CONSOLE
 
 // How to convert cv::Mat to dlib::array2d<rgb_pixel>?
-//https://stackoverflow.com/questions/29118317/how-to-convert-mat-to-array2drgb-pixel/40687888
+// https://stackoverflow.com/questions/29118317/how-to-convert-mat-to-array2drgb-pixel/40687888
 
 //using namespace dlib;
 using namespace std;
