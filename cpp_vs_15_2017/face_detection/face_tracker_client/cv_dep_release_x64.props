@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <IncludePath>$(OPENCV_DIR)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OPENCV_DIR)lib\x64\Release;$(OPENCV_DIR)lib\x64\3rdParty\Release;$(QTDIR)\qtbase\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>opencv_calib3d331.lib;opencv_core331.lib;opencv_features2d331.lib;opencv_flann331.lib;opencv_imgcodecs331.lib;opencv_imgproc331.lib;opencv_ml331.lib;opencv_objdetect331.lib;opencv_photo331.lib;opencv_shape331.lib;opencv_stitching331.lib;opencv_superres331.lib;opencv_video331.lib;opencv_videoio331.lib;opencv_videostab331.lib;IlmImf.lib;ittnotify.lib;libjpeg.lib;libpng.lib;libtiff.lib;libjasper.lib;zlib.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Test.lib;Qt5Widgets.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
