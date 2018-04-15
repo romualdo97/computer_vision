@@ -5,6 +5,7 @@
 #include <dlib\opencv\cv_image.h>
 // include standards
 #include <iostream>
+#include <time.h>
 
 #define DOWNSAMPLE_RATIO 2 // how much downscale original cam image for speed-up face detector?
 #define SKIP_N_FRAMES 1 // how many webcam frames skip from face detector?
@@ -13,6 +14,13 @@
 
 // convert dlib rectangle to an opencv one
 cv::Rect dlibRect2cvRect(dlib::rectangle, unsigned int, unsigned int);
+
+static double diffclock(clock_t clock1, clock_t clock2)
+{
+	double diffticks = clock2 - clock1;
+	double diffms = diffticks / CLOCKS_PER_SEC;
+	return diffms;
+}
 
 int main(void)
 {
@@ -37,6 +45,7 @@ int main(void)
 	// windows loop
 	while (true)
 	{	
+		clock_t start_t = clock();
 		// capture videoframe
 		cap >> videoframe;
 		cv::flip(videoframe, videoframe, 1);
@@ -83,11 +92,13 @@ int main(void)
 		cv::imshow("Frame", videoframe);
 		//std::cout << (unsigned int)count << std::endl;
 		count++;
-		if (cv::waitKey(30) == 'q')
-		{
-			break;
-		}
-	}
+		//if (cv::waitKey(30) == 'q')
+		//{
+		//	break;
+		//}
+		clock_t end_t = clock();		
+		std::cout << "elapsed: " << diffclock(start_t, end_t) << "s\n";
+	}	
 	return 0;
 }
 

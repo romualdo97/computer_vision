@@ -14,9 +14,15 @@
     <ClInclude Include="face_tracker.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="input.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="face_tracker.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="input.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

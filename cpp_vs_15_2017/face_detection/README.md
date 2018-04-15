@@ -40,7 +40,7 @@
 - *[interactivo]* Intentar solucionar problema de escala y rotacion con algoritmo de trackeo MOSSE para seguimiento de objeto (combinar MOSSE con HOG: identificar región a trackear con HOG-based y continuar el trackeo de esa región con MOSSE).  
 - *[transmedia]* Escribir aplicación basica para detección de objetos arbitrario en una maqueta.
 
-## iteration 3 [working]
+## iteration 3 [ready]
 ### [*unity-app*] integrate face detection with Unity
 
 **problema a solucionar:** Se necesita integrar la aplicación optimizada en C++ y CUDA con Unity Engine
