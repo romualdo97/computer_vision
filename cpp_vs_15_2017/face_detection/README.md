@@ -1,4 +1,6 @@
 # Plan de prototipos
+# [Ver cronograma aquí](https://instagantt.com/shared/s/548861461553700/latest)
+
 
 ## iteration 0 [ready]
 ### [*python-face*] implement basic face detection 
