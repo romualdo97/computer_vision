@@ -65,7 +65,14 @@ Definir componentes de hardware necesarios para empezar a buscarlos (televisor)
 **siguiente prototipo:** 
 - *[interactivo]* Escena de Unity Engine que genera naturaleza de forma generativa usando fractales a medida que el usuario sonríe,
 
-## Transmedia-iteration 0 [working]
+## Experiencial-iteration 4 [working]
+### [*unity-cpp*] Implement "user gesture" detection system
+
+**problema a solucionar:** Se necesita desarrollar un sistema que permita identificar distintos gestos que el usuario realize con un baston chamanico
+
+**estado:** En progreso.
+
+## Transmedial-iteration 0 [working]
 ### [*python-object*] implement basic object classification app
 
 **problema a solucionar:** Se necesita escribir una aplicación que sea capaz de distinguir entre distintos tipos de objetos que serán construidos para una maqueta (arboles, cabaña, indígena).
