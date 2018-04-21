@@ -1,10 +1,10 @@
 # Plan de prototipos
 # [Ver cronograma aquí](https://instagantt.com/shared/s/548861461553700/latest)
 
-# TODO-list
+## TODO-list
 Definir componentes de hardware necesarios para empezar a buscarlos (televisor)
 
-## iteration 0 [ready]
+## Experiencial-iteration 0 [ready]
 ### [*python-face*] implement basic face detection 
 **problema a solucionar:** Se necesita implementar un sistema que sea capaz de detectar caras y pasar esta información a unity.
 
@@ -15,7 +15,7 @@ Definir componentes de hardware necesarios para empezar a buscarlos (televisor)
 
 **siguiente prototipo:** *[interactivo]* Encontrar un algoritmo que detecte caras y sea inmune a rotación y escala. 
 
-## iteration 1 [ready]
+## Experiencial-iteration 1 [ready]
 ###  [*python-face*]  improve correct face detection rate
 **problema a solucionar:** Se necesita implementar un sistema que sea capaz de detectar caras rotadas y escaladas para pasar esta información a unity.
 
@@ -32,7 +32,7 @@ Definir componentes de hardware necesarios para empezar a buscarlos (televisor)
 - *[interactivo]* Aplicar optimizaciones en CPU compilando DLIB usando mínimamente SSE2
 - *[interactivo]* Aplicar optimizaciones en GPU compilando DLIB usando CUDA.
 
-## iteration 2 [ready]
+## Experiencial-iteration 2 [ready]
 ### [*cpp-face*] speedup python HOG-based detection app
 
 **problema a solucionar:** Se necesita portar la aplicación escrita en Python durante la *iteración 1* a C++ y aplicar optimizaciones en CPU y GPU.
@@ -52,7 +52,7 @@ Definir componentes de hardware necesarios para empezar a buscarlos (televisor)
 - *[interactivo]* Intentar solucionar problema de escala y rotacion con algoritmo de trackeo MOSSE para seguimiento de objeto (combinar MOSSE con HOG: identificar región a trackear con HOG-based y continuar el trackeo de esa región con MOSSE).  
 - *[transmedia]* Escribir aplicación basica para detección de objetos arbitrario en una maqueta.
 
-## iteration 3 [ready]
+## Experiencial-iteration 3 [ready]
 ### [*unity-app*] integrate face detection with Unity
 
 **problema a solucionar:** Se necesita integrar la aplicación optimizada en C++ y CUDA con Unity Engine
@@ -65,14 +65,14 @@ Definir componentes de hardware necesarios para empezar a buscarlos (televisor)
 **siguiente prototipo:** 
 - *[interactivo]* Escena de Unity Engine que genera naturaleza de forma generativa usando fractales a medida que el usuario sonríe,
 
-## iteration 4 [scheduling]
+## Transmedia-iteration 0 [working]
 ### [*python-object*] implement basic object classification app
 
 **problema a solucionar:** Se necesita escribir una aplicación que sea capaz de distinguir entre distintos tipos de objetos que serán construidos para una maqueta (arboles, cabaña, indígena).
 
 **estado:** En progreso.
 
-## iteration 5 [scheduling]
+## Experiencial-iteration x [scheduling]
 ### [*unity-app*] Smile for forest generation
 
 **problema a solucionar:** Se necesita desarrollar una aplicación en Unity Engine que sea capaz de generar naturaleza de manera procedural a medida que el usuario sonría.
@@ -82,7 +82,7 @@ Definir componentes de hardware necesarios para empezar a buscarlos (televisor)
 **siguiente prototipo:** 
 - *[interactivo]* Desarrollar un primero prototipo físico del producto interactivo
 
-## iteration 6 [scheduling]
+## Experiencial-iteration x [scheduling]
 ### [*real*] prototipar primer montaje del producto interactivo
 
 **problema a solucionar:** Se necesita desarrollar un primer prototipo de montaje para probar todos los sistemas de software del producto interactivo así como su integración con el hardware.
