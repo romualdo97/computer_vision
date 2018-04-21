@@ -1,5 +1,5 @@
 # Plan de prototipos
-# [Ver cronograma aquí](https://instagantt.com/shared/s/548861461553700/latest)
+# [Ver planeación del proyecto aquí](https://instagantt.com/shared/s/548861461553700/latest)
 
 ## TODO-list
 Definir componentes de hardware necesarios para empezar a buscarlos (televisor)
